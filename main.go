@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"net"
-)
-
 /*
 type About struct {
 	name        string
