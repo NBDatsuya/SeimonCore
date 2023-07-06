@@ -14,11 +14,6 @@ type About struct {
 	since string
 }*/
 
-type Server struct {
-	Ip   string
-	Port int
-}
-
 func main() {
 	/*
 		about := About{
