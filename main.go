@@ -15,7 +15,7 @@ func main() {
 			name:        "SeimonCore",
 			version:     "V0.0.1 Genesis Prototype",
 			description: "The Genesis of SeimonCore",
-			updateTime:  "2023-7-6T2:22:00",
+			updateTime:  "2023-7-7T4:48:00",
 			since: "2023-7-2T2:41:00",
 		}*/
 	server := NewServer("127.0.0.1", 2121)
