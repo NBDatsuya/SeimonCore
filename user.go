@@ -53,3 +53,20 @@ func (this *User) Offline() {
 func (this *User) DoMessage(msg string) {
 	this.server.BroadCast(this, msg)
 }
+
+/*
+*
+Message Format: who
+*/
+func (this *User) SendMessage(msg string) {
+	if msg == "who" {
+		this.server.mapLock.Lock()
+		for _, user := range this.server.OnlineMap {
+			onlineMsg := "[" + user.Addr + "](" + user.Name + "): " + "(is online)\n"
+			this.SendMessage(onlineMsg)
+		}
+		this.server.mapLock.Unlock()
+	} else {
+		this.server.BroadCast(this, msg)
+	}
+}
